@@ -1,8 +1,6 @@
+import data from './data.js';
 
-
-import data from './data.js'
-
-data.columns.map((el,id) =>{
+data.columns.forEach((el, id) => {
     const cont = document.getElementById('cont');
     const cont_block = document.createElement('div');
     const body = document.createElement('div');
@@ -10,11 +8,10 @@ data.columns.map((el,id) =>{
     const body_text = data.rows[0].values[id];
     header.innerHTML = el.name;
 
-    if(el.dataType === 'DateTime' ){
+    if (el.dataType === 'DateTime') {
         let date = new Date(data.rows[0].values[id]).toLocaleDateString("ru-RU");
-       
         body.innerHTML = date;
-    }else{
+    } else {
         body.innerHTML = body_text;
     }
 
@@ -25,7 +22,4 @@ data.columns.map((el,id) =>{
     cont_block.classList.add('content__block');
     header.classList.add('block__header');
     body.classList.add('block__body');
-
-   
 })
-
