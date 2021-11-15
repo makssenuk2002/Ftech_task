@@ -7,7 +7,6 @@
 .content__row{
     display: flex;
     flex-wrap: wrap;
-
 }
 .content__block{
     flex: 1 0 350px;
@@ -18,7 +17,6 @@
     align-items: center;
     background-color: #fff;
     min-height: 300px;
-
 }
 .block__header{
     text-align: center;
